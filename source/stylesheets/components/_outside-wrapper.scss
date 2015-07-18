@@ -1,0 +1,45 @@
+.outside-wrapper {
+  background-color: $burnt-creme;
+  border-bottom: $base-border;
+  padding: $base-spacing 0;
+
+  .container {
+    @include media($large-screen) {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex: 0;
+      flex: 0;
+      -webkit-align-items: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  .intro-image {
+    text-align: center;
+
+    @include media($large-screen) {
+      @include span-columns(3.5);
+      margin-bottom: -$base-spacing;
+    }
+
+    img {
+      max-width: 50%;
+
+      @include media($large-screen) {
+        max-width: none;
+      }
+    }
+  }
+
+  .intro-body {
+    @include media($large-screen) {
+      @include span-columns(8.5);
+      font-size: 1.15em;
+    }
+
+    h1 {
+      font-size: 2.75em;
+      margin-bottom: 0.25em;
+    }
+  }
+}

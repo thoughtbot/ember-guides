@@ -15,7 +15,13 @@
   <body class="guides <%= page_classes %>">
     <%= partial "header" %>
 
-    <%= yield_content :outside_wrapper %>
+    <%- if content_for?(:outside_wrapper) %>
+      <div class="outside-wrapper">
+        <div class="container">
+          <%= yield_content :outside_wrapper %>
+        </div>
+      </div>
+    <% end %>
 
     <main class="container">
       <%= partial "sidebar" %>
