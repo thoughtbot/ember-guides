@@ -8,6 +8,10 @@ ol {
     list-style-type: disc;
     margin-bottom: $small-spacing;
     padding-left: $base-spacing;
+
+    > li {
+      padding: ($small-spacing / 2) 0;
+    }
   }
 
   &%default-ol {
